@@ -1,8 +1,6 @@
 import React from "react";
 import { inject, observer } from "mobx-react";
-import Navbar from "../../components/navbar";
 import NotesList from "../../components/card";
-import ManageNotes from "../manage";
 
 class Todo extends React.Component {
   constructor() {
@@ -18,7 +16,6 @@ class Todo extends React.Component {
     const { notes } = this.props;
     return (
       <React.Fragment>
-        <Navbar />
         <NotesList onAddNote={this.handleAddNote} data={notes} />
       </React.Fragment>
     );

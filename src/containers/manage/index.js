@@ -19,14 +19,14 @@ class ManageNotes extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="offset-4 col-4 mt-4">
+        <div className="offset-2 col-8 mt-4">
           <div className="card">
-            <div className="card-header">
+            <div className="card-header bg-secondary text-light">
               <div>Add Notes</div>
             </div>
             <div className="card-body">
               <div className="d-flex justify-content-between">
-                <div>
+                <div style={{ flex: "1" }}>
                   <input
                     type="text"
                     placeholder="Enter Notes"
@@ -37,9 +37,17 @@ class ManageNotes extends React.Component {
                     }
                   ></input>
                 </div>
-                <button className="btn btn-primary" onClick={this.onAddNewNote}>
-                  AddNotes
-                </button>
+                <div className="d-flex ml-2">
+                  <button
+                    className="btn btn-primary"
+                    onClick={this.onAddNewNote}
+                  >
+                    AddNotes
+                  </button>
+                  <a href="/" className="btn btn-secondary ml-2">
+                    Cancel
+                  </a>
+                </div>
               </div>
             </div>
           </div>

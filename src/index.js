@@ -7,10 +7,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import store from "./store";
 import Todo from "./containers/todo";
 import ManageNotes from "./containers/manage";
+import Navbar from "./components/navbar";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider {...store}>
+      <Navbar />
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Todo}></Route>
